@@ -85,7 +85,8 @@ textarea {
 }
 body{
   background:url(../images/halie-west-25xggax4bSA-unsplash.jpg) no-repeat;
-  background-size: 40% 100vh;
+  background-size: 40% max(100%, 100vh);
+  height: 100vh;
 }
 .logo-placer{
   position: absolute;
@@ -181,4 +182,10 @@ form > button + p > a:visited{
   color: var(--button-bg-color);
   text-decoration: none;
   font-weight: 700;
+}
+footer{
+  color: white;
+  margin-left: 12%;
+  position: absolute;
+  bottom: 1.6rem;
 }
