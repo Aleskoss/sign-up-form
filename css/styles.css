@@ -1,7 +1,17 @@
+@font-face {
+    font-family: 'boogalooregular';
+    src: url('boogaloo-regular-webfont.woff2') format('woff2'),
+         url('boogaloo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 :root {
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --logo-background: rgba(28, 27, 27, 0.6);
-  
+  --logo-font: 'boogalooregular';
+  --r-side-bg-color:rgb(204, 198, 198, 0.6);
+  --box-shadow-color: rgb(164, 164, 164);
 }
 
 body {
@@ -29,6 +39,7 @@ body {
   line-height: 1.5;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  position: relative;
 }
 
 /* 6. Improve media defaults */
@@ -70,10 +81,10 @@ textarea {
 }
 body{
   background:url(../images/halie-west-25xggax4bSA-unsplash.jpg) no-repeat;
-  background-size: 40%;
+  background-size: 40% 100vh;
 }
 .logo-placer{
-  position: relative;
+  position: absolute;
   width: 40%;
   color: white;
   display: flex;
@@ -81,10 +92,63 @@ body{
   justify-content: center;
   background: var(--logo-background);
   top: 200px;
-  font-size: 100px;
+  font-size: 40px;
   padding: 10px 0px;
 }
 .logo-placer img{
-  width: 100px;
-  height: auto;
+  height: 120px;
+  width: auto;
+}
+.logo-placer h1{
+  font-family: var(--logo-font,--system-ui);
+  letter-spacing: .01rem;
+}
+header,form{
+  width: 60%;
+  margin-left: auto;
+}
+header{
+  padding: 100px 100px 40px 40px;
+  background-color: var(--r-side-bg-color);
+}
+header p + p{
+  margin-top: 50px;
+}
+header p{
+  font-size: 1.3rem;
+  font-weight: 700;
+  width: clamp(45ch, 50%, 75ch);
+}
+form{
+  padding: 20px 100px 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0px 10px 10px var(--box-shadow-color);
+}
+legend{
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+label{
+  text-transform: uppercase;
+  display: block;
+  font-size: .8rem;
+  font-weight: 600;
+}
+.input-div{
+  width: 50%;
+}
+.input-div > input{
+  margin: 2px 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(190, 190, 190);
+}
+input:focus{
+  box-shadow: 0px 0px 5px var(--box-shadow-color);
+}
+input:invalid{
+  border-color: red;
 }
