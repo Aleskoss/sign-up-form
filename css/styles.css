@@ -12,6 +12,10 @@
   --logo-font: 'boogalooregular';
   --r-side-bg-color:rgb(204, 198, 198, 0.6);
   --box-shadow-color: rgb(164, 164, 164);
+  --button-margin: 50px 0px 0px 50px;
+  --button-padding: 5px 20px;
+  --input-border-color:#E5E7EB;
+  --button-bg-color:#596D48;
 }
 
 body {
@@ -119,16 +123,18 @@ header p{
   font-weight: 700;
   width: clamp(45ch, 50%, 75ch);
 }
-form{
-  padding: 20px 100px 20px 50px;
+fieldset{
   display: flex;
   flex-wrap: wrap;
+  appearance: none;
+  border: 0;
   box-shadow: 0px 10px 10px var(--box-shadow-color);
+  padding: 60px 100px 20px 50px;
+  position: relative;
 }
 legend{
-  width: 100%;
-  text-align: left;
-  margin-bottom: 20px;
+  position: absolute;
+  top: 5px;
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -137,6 +143,7 @@ label{
   display: block;
   font-size: .8rem;
   font-weight: 600;
+  margin: 0px 5px;
 }
 .input-div{
   width: 50%;
@@ -144,11 +151,34 @@ label{
 .input-div > input{
   margin: 2px 5px;
   border-radius: 5px;
-  border: 1px solid rgb(190, 190, 190);
+  border: 1px solid var(--input-border-color);
 }
 input:focus{
   box-shadow: 0px 0px 5px var(--box-shadow-color);
 }
-input:invalid{
+input#first-name,
+input#last-name{
+  text-transform: capitalize;
+}
+input:invalid,
+input:focus:invalid{
   border-color: red;
+  outline: 0;
+}
+button,
+form > button + p{
+  margin: var(--button-margin);
+}
+button{
+  padding: var(--button-padding);
+  background-color: var(--button-bg-color);
+  color: rgb(255, 255, 255);
+  border: 0;
+  border-radius: 7px;
+}
+form > button + p > a:link,
+form > button + p > a:visited{
+  color: var(--button-bg-color);
+  text-decoration: none;
+  font-weight: 700;
 }
