@@ -1,5 +1,7 @@
 :root {
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --logo-background: rgba(28, 27, 27, 0.6);
+  
 }
 
 body {
@@ -65,4 +67,24 @@ select,
 textarea {
   font-family: inherit;
   font-size: 100%;
+}
+body{
+  background:url(../images/halie-west-25xggax4bSA-unsplash.jpg) no-repeat;
+  background-size: 40%;
+}
+.logo-placer{
+  position: relative;
+  width: 40%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--logo-background);
+  top: 200px;
+  font-size: 100px;
+  padding: 10px 0px;
+}
+.logo-placer img{
+  width: 100px;
+  height: auto;
 }
