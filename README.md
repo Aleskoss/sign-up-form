@@ -1,2 +1,2 @@
 # sign-up-form
-In this project I will demonstrate my skill that I learned regarding emmet, advanced html and css styling + making forms and tables + working with fonts, css variables and functions
+In this project I will demonstrate my skill that I learned regarding emmet, advanced html and css styling, form basics and form validation + working with fonts, css custom properties and css functions and also working with css pseudo classes and pseudo elements + position element, another thing I learned on my path here was what frameworks are and preprocessors , svgs and what kind of css units I can use 
