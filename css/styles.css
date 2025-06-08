@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'boogalooregular';
-    src: url('boogaloo-regular-webfont.woff2') format('woff2'),
-         url('boogaloo-regular-webfont.woff') format('woff');
+    src: url('../font/webfontkit-20250608-030542/boogaloo-regular-webfont.woff2') format('woff2'),
+         url('../font/webfontkit-20250608-030542/boogaloo-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -166,6 +166,7 @@ input:focus:invalid{
   border-color: red;
   outline: 0;
 }
+
 button,
 form > button + p{
   margin: var(--button-margin);
