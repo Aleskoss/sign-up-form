@@ -266,6 +266,7 @@ form button[type="submit"] {
 
 form button[type="submit"]:hover {
   background-color: var(--clr-green-400);
+  cursor: pointer;
 }
 
 p:last-of-type {
