@@ -44,7 +44,12 @@
               </div>
               <div>
                 <label for="pwd">password</label>
-                <input type="password" id="pwd" />
+                <input
+                  type="password"
+                  id="pwd"
+                  pattern="(?=.*[0-9])(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{8,}"
+                />
+                <span></span>
               </div>
             </section>
             <section class="form-side-right">
@@ -58,7 +63,12 @@
               </div>
               <div>
                 <label for="pwd-confirm">Confirm password</label>
-                <input type="password" id="pwd-confirm" />
+                <input
+                  type="password"
+                  id="pwd-confirm"
+                  pattern="(?=.*[0-9])(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{8,}"
+                />
+                <span></span>
               </div>
             </section>
           </div>
@@ -66,8 +76,8 @@
         <section class="button-section">
           <button type="submit">Create Account</button>
         </section>
-        <p>Already have an account? <a href="#">Log in</a></p>
       </form>
+      <p>Already have an account? <a href="#">Log in</a></p>
     </div>
   </body>
 </html>
